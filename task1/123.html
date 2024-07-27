@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: black;
+            background-color: rgb(219, 219, 45);
+        }
+
+        .video-background {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header {
+            background-color: yellowgreen;
+            color: black;
+            padding: 1rem 0;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        header .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: black;
+            font-size: 2rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 1rem;
+        }
+
+        header nav ul li a {
+            color: black;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        main {
+            padding: 2rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        main section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            transition: filter 0.3s ease;
+        }
+
+        main section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.5);
+            transition: filter 0.3s ease;
+        }
+
+        main section:hover {
+            filter: brightness(1);
+        }
+
+        main section#welcome:before {
+            background-image: url('/ASSETS/s.jpg');
+        }
+
+        main section#home:before {
+            background-image: url('/ASSETS/cc.jpg');
+        }
+
+        main section#about:before {
+            background-image: url('/ASSETS/abb.png');
+        }
+
+        main section#contact:before {
+            background-image: url('/ASSETS/contact-background.jpg');
+        }
+
+        main h2 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 1rem;
+            margin: 0 1rem;
+            background-color: rgba(16, 16, 16, 0.8);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .column img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        #about,
+        #contact {
+            background-color: rgb(231, 57, 127);
+        }
+
+        footer {
+            background-color: yellowgreen;
+            color: black;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Style for the highlighted text */
+        #welcome h3 {
+            color: yellow; /* Change color as needed */
+            font-style: italic;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="/ASSETS/videoplayback.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <header>
+        <div class="container">
+            <h1>Welcome to Delights and Kitchen Kudos</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="welcome">
+            <div class="container">
+                <h2><i class="fas fa-utensils"></i> Welcome to Delights and Kitchen Kudos</h2>
+                <h3>"Unleashing culinary creativity, one recipe at a time."</h3>
+            </div>
+        </section>
+        <section id="home">
+            <div class="container">
+                <h2><i class="fas fa-home"></i> Home Section</h2>
+                <p>This is the home section of the landing page.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2><i class="fas fa-info-circle"></i> About Us</h2>
+                <p>Welcome to Delights and Kitchen Kudos, your ultimate destination for culinary inspiration and knowledge. Founded with a passion for cooking and a love for sharing delicious recipes, we aim to empower food enthusiasts of all levels to explore the joys of cooking.</p>
+                <p>Our dedicated team of chefs, nutritionists, and food lovers curates a collection of mouthwatering recipes, informative cooking guides, and a platform for your culinary inquiries. Whether you're looking to master a new dish or seeking creative cooking ideas, Delights and Kitchen Kudos is here to support your kitchen adventures.</p>
+                <p>Join us in celebrating the art of cooking. Explore our resources, connect with fellow foodies, and embark on a flavorful journey that transforms your time in the kitchen into a delightful experience.</p>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <h2><i class="fas fa-cogs"></i> Our Services</h2>
+                <div class="row">
+                    <div class="column">
+                        <img src="/ASSETS/rec.png" alt="RECIPE">
+                        <h3>RECIPE</h3>
+                        <p>Click to view recipe book.</p>
+                    </div>
+                    <div class="column">
+                        <img src="/ASSETS/video.jpg" alt="VIDEO GUIDE">
+                        <h3>VIDEO GUIDE</h3>
+                        <p>Click to view cooking video guide.</p>
+                    </div>
+                    <div class="column">
+                        <img src="/ASSETS/query.png" alt="ASK QUERY">
+                        <h3>QUERY</h3>
+                        <p>Click to ask query.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>CONTACT: 9972557654 </p>
+                <p>MAIL ID: dkkfoods@gmail.com</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Landing Page. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
